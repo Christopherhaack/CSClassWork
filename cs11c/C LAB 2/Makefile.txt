@@ -1,0 +1,36 @@
+#
+# CS 11: Makefile for C track, assignment 2.
+#
+
+#
+# NOTE: When pasting this file from a browser window into a text editor,
+#       the tab characters at the beginning of the command lines will
+#       almost always be replaced by e.g. eight spaces.  You MUST convert
+#       them back into a single tab or this file will not work!  "make"
+#       is _extremely_ picky about this: command lines must start with one
+#       tab and no spaces, no more and no less.  You're better off saving
+#       this file directly (e.g. by typing control-S in mozilla or firefox).
+#       Also, remove this comment in your submitted Makefile.
+#
+
+CC              = gcc
+OUTFILE         = cell_automata.out
+
+
+all:
+	
+
+easter: easter.o
+	$(CC) easter.o -o easter
+
+cell_automta.out:  
+	$(CC) -Wall -Wstrict-prototypes -ansi -pedantic -c easter.c
+
+
+check:
+	c_style_check 1dcarray.c 1dcpointer.c
+
+clean: 
+	rm easter.o easter $(OUTFILE)
+
+
